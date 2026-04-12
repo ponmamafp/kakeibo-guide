@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>かんたん家計簿 - 使い方ガイド</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Helvetica Neue',Arial,'Hiragino Kaku Gothic ProN',sans-serif; background:#faf6f2; color:#2d2318; line-height:1.8; }
+.hero { background:linear-gradient(135deg,#e07b4f 0%,#f4a261 100%); color:#fff; padding:60px 20px 50px; text-align:center; }
+.hero h1 { font-size:28px; margin-bottom:8px; }
+.hero p { font-size:14px; opacity:0.9; }
+.container { max-width:640px; margin:0 auto; padding:20px 16px 80px; }
+.section { background:#fff; border-radius:16px; border:1.5px solid #ede5db; padding:24px 20px; margin-top:24px; box-shadow:0 2px 12px rgba(224,123,79,0.06); }
+.section h2 { font-size:17px; margin-bottom:12px; color:#e07b4f; display:flex; align-items:center; gap:8px; }
+.section h3 { font-size:14px; margin:16px 0 8px; color:#2d2318; }
+.section p, .section li { font-size:13px; color:#5a4a3a; }
+.section ul { padding-left:20px; }
+.section li { margin-bottom:6px; }
+.step { display:flex; gap:12px; margin-bottom:16px; align-items:flex-start; }
+.step-num { background:#e07b4f; color:#fff; width:28px; height:28px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:900; flex-shrink:0; margin-top:2px; }
+.step-body { flex:1; }
+.step-body strong { font-size:13px; display:block; margin-bottom:2px; }
+.step-body span { font-size:12px; color:#8a7a6a; }
+.tag { display:inline-block; background:#fef0e6; color:#e07b4f; font-size:11px; font-weight:700; padding:3px 10px; border-radius:20px; margin-right:6px; margin-bottom:4px; }
+.tip { background:#fef9e7; border-left:3px solid #f4a261; padding:12px 14px; border-radius:0 10px 10px 0; margin-top:12px; font-size:12px; color:#5a4a3a; }
+.tab-preview { display:flex; gap:6px; margin:12px 0; flex-wrap:wrap; }
+.tab-pill { background:#f5ede6; border-radius:20px; padding:6px 14px; font-size:12px; font-weight:700; color:#8a7a6a; }
+.tab-pill.active { background:#e07b4f; color:#fff; }
+.faq-q { font-size:13px; font-weight:700; margin-top:14px; }
+.faq-a { font-size:12px; color:#5a4a3a; margin-top:4px; padding-left:12px; border-left:2px solid #ede5db; }
+.footer { text-align:center; padding:30px 20px; font-size:11px; color:#8a7a6a; }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>かんたん家計簿</h1>
+  <p>スマホで10秒、毎日の支出をサクッと記録</p>
+</div>
+
+<div class="container">
+
+  <div class="section">
+    <h2>👋 はじめに</h2>
+    <p>「かんたん家計簿」は、スマホのブラウザだけで使える無料の家計簿アプリです。アプリのインストール不要、会員登録も不要。URLを開くだけですぐ使えます。</p>
+    <div class="tip">データはお使いのブラウザ（端末）に保存されます。他の端末とは共有されません。大切なデータはCSVバックアップを取っておきましょう。</div>
+  </div>
+
+  <div class="section">
+    <h2>📌 ホーム画面に追加しよう</h2>
+    <p>ブラウザのブックマークからでも使えますが、ホーム画面に追加するとアプリのようにワンタップで開けます。</p>
+    <h3>iPhone（Safari）の場合</h3>
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-body">
+        <strong>家計簿のページを開いた状態で、画面下の共有ボタン（□↑）をタップ</strong>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-body">
+        <strong>「ホーム画面に追加」を選ぶ</strong>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-body">
+        <strong>名前をつけて「追加」をタップ</strong>
+        <span>ホーム画面にアイコンが追加されます</span>
+      </div>
+    </div>
+    <h3>Android（Chrome）の場合</h3>
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-body">
+        <strong>右上の「︙」メニューをタップ</strong>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-body">
+        <strong>「ホーム画面に追加」を選ぶ</strong>
+        <span>アプリのように使えるようになります</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>📱 画面の見方</h2>
+    <p>画面下の4つのタブで切り替えます。</p>
+    <div class="tab-preview">
+      <span class="tab-pill active">📊 ダッシュ</span>
+      <span class="tab-pill">📋 明細</span>
+      <span class="tab-pill">📈 分析</span>
+      <span class="tab-pill">⚙️ 設定</span>
+    </div>
+    <ul>
+      <li><strong>ダッシュ</strong> ― 今月の収支サマリー・グラフ・予算の進捗</li>
+      <li><strong>明細</strong> ― 記録の編集と振り返り（無駄チェック・特別費フラグ）</li>
+      <li><strong>分析</strong> ― 前月比較・年間分析</li>
+      <li><strong>設定</strong> ― カテゴリのカスタマイズ</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>✏️ 記録のつけ方</h2>
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-body">
+        <strong>支出 or 収入を選ぶ</strong>
+        <span>ダッシュ画面の上部にあるタブで切り替えます</span>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-body">
+        <strong>カテゴリを選ぶ</strong>
+        <span>チップ（ボタン）をタップするだけ</span>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-body">
+        <strong>日付・金額を入力して「追加」</strong>
+        <span>日付は自動で今日が入ります。金額を入れて追加ボタンをタップ</span>
+      </div>
+    </div>
+    <div class="tip">当月以外の日付を入力すると確認メッセージが表示されます。入力ミス防止のためです。</div>
+    <div class="tip" style="margin-top:8px">何を買ったかメモを残したいときは、明細タブの「振り返り」からメモ欄に記入できます。</div>
+  </div>
+
+  <div class="section">
+    <h2>🎯 予算の目標設定</h2>
+    <p>ダッシュ画面の下にある目標設定エリアで、カテゴリごとの予算を設定できます。</p>
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-body">
+        <strong>カテゴリボタンを選ぶ</strong>
+        <span>予算を設定したいカテゴリをタップ</span>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-body">
+        <strong>金額を入力</strong>
+        <span>「万」ボタンで×10,000に変換できます（例: 3 → 30,000）</span>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-body">
+        <strong>「設定」をタップ</strong>
+        <span>進捗バーで達成率が表示されます。使いすぎカテゴリが上に来ます</span>
+      </div>
+    </div>
+    <div class="tip">「万」ボタンは小数もOK。0.5 → 万 で 5,000円になります。</div>
+    <h3>予算に表示するカテゴリを選ぶ</h3>
+    <p>設定タブのカテゴリ一覧にある「予算」列にチェックを入れたカテゴリだけが、目標設定のボタンに表示されます。全カテゴリに予算を立てる必要はないので、管理したいものだけチェックしましょう。</p>
+  </div>
+
+  <div class="section">
+    <h2>🔍 振り返り（無駄チェック）</h2>
+    <p>明細タブの「振り返り」サブタブで、今月の支出を振り返れます。</p>
+    <div style="margin:12px 0">
+      <span class="tag">😵 無駄だった</span>
+      <span style="font-size:12px;color:#5a4a3a">買わなきゃよかった・衝動買い</span>
+    </div>
+    <div style="margin:8px 0">
+      <span class="tag">🔄 見直せる</span>
+      <span style="font-size:12px;color:#5a4a3a">もっと安くできた・見直しできそう</span>
+    </div>
+    <div style="margin:8px 0">
+      <span class="tag">⭐ 特別費</span>
+      <span style="font-size:12px;color:#5a4a3a">毎月じゃない大きめの出費（他タグと併用OK）</span>
+    </div>
+    <p style="margin-top:8px">各カードのメモ欄に自由にメモも残せます。</p>
+  </div>
+
+  <div class="section">
+    <h2>📥 データのバックアップ</h2>
+    <p>画面下のバーから2種類のCSVを出力できます。</p>
+    <ul>
+      <li><strong>📥 当月CSV</strong> ― 今月の明細だけをダウンロード</li>
+      <li><strong>💾 全履歴バックアップ</strong> ― 過去月を含む全データをダウンロード</li>
+    </ul>
+    <div class="tip">月次リセットすると当月データはアーカイブに移動します。削除はされないので、全履歴バックアップからいつでも取り出せます。</div>
+  </div>
+
+  <div class="section">
+    <h2>🗓️ 月次リセットのやり方</h2>
+    <p>月が変わったら、画面下の「🗑️ 月次リセット」ボタンで今月のデータをアーカイブに移動し、ダッシュボードをリセットします。</p>
+    <h3>おすすめのタイミング</h3>
+    <ul>
+      <li><strong>月初1〜3日</strong>がベスト。前月分の振り返りを終えてからリセットしましょう</li>
+      <li>リセット前に<strong>当月CSVをダウンロード</strong>しておくと安心です</li>
+    </ul>
+    <h3>リセットするとどうなる？</h3>
+    <ul>
+      <li>当月の記録 → アーカイブに移動（消えません）</li>
+      <li>予算の目標設定 → そのまま引き継がれます</li>
+      <li>ダッシュボードの数字 → ゼロからスタート</li>
+    </ul>
+    <div class="tip">リセットしなくても、ダッシュボードは当月分だけ表示されるので、急がなくても大丈夫です。</div>
+  </div>
+
+  <div class="section">
+    <h2>⚙️ カテゴリのカスタマイズ</h2>
+    <p>設定タブで、カテゴリの追加・削除・名前やアイコンの変更ができます。</p>
+    <h3>注意点</h3>
+    <ul>
+      <li>カテゴリ名を変更すると<strong>当月の記録もまとめて変わります</strong></li>
+      <li>過去月（リセット済み）の記録はそのまま残ります</li>
+      <li>前月比較では旧名・新名が別カテゴリとして表示されます</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>📈 分析機能</h2>
+    <h3>前月比較</h3>
+    <p>収入・支出・収支バランスを前月と比較。カテゴリ別の増減もひと目でわかります。</p>
+    <h3>年間分析</h3>
+    <p>年間の収支推移グラフと、カテゴリ別の支出ランキングを表示します。</p>
+  </div>
+
+  <div class="section">
+    <h2>❓ よくある質問</h2>
+    <div class="faq-q">Q. 他のスマホやPCでも見られる？</div>
+    <div class="faq-a">データは端末のブラウザに保存されるため、別の端末からは見られません。CSVバックアップで手動でデータを移すことはできます。</div>
+    <div class="faq-q">Q. 月次リセットするとデータは消える？</div>
+    <div class="faq-a">消えません。アーカイブとして保存され、全履歴バックアップCSVからいつでも取り出せます。分析機能でも過去月のデータが使われます。</div>
+    <div class="faq-q">Q. ブラウザのデータを消したらどうなる？</div>
+    <div class="faq-a">記録が消えてしまいます。定期的にCSVバックアップを取ることをおすすめします。</div>
+    <div class="faq-q">Q. 特別費って何？</div>
+    <div class="faq-a">毎月発生しない大きめの出費（冠婚葬祭、家電の買い替えなど）に付けるタグです。ダッシュボードで「うち特別費」として表示されます。</div>
+  </div>
+
+</div>
+
+<div class="footer">
+  かんたん家計簿 使い方ガイド
+</div>
+
+</body>
+</html>
